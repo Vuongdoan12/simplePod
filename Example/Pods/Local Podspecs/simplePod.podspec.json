@@ -1,0 +1,22 @@
+{
+  "name": "simplePod",
+  "version": "0.1.0",
+  "summary": "A short description of simplePod.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/vinhtranSmartDev/simplePod",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "vinhtranSmartDev": "doanhavuongit@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/vinhtranSmartDev/simplePod.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source_files": "simplePod/Classes/**/*"
+}

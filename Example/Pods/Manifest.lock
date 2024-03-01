@@ -1,0 +1,16 @@
+PODS:
+  - simplePod (0.1.0)
+
+DEPENDENCIES:
+  - simplePod (from `../`)
+
+EXTERNAL SOURCES:
+  simplePod:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  simplePod: d4ff27cdb28614cb379ca0b89efae0ffe9807389
+
+PODFILE CHECKSUM: f6eed62e4cedd1ab721b138f13cbc959576c2ae9
+
+COCOAPODS: 1.15.2
