@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'simplePod'
-  s.version          = '0.0.2'
+  s.version          = '0.0.3'
   s.summary          = 'This description is used to generate tags and improve search results.'
 
 # This description is used to generate tags and improve search results.
@@ -30,12 +30,19 @@ Pod::Spec.new do |s|
 
   s.source_files = 'Classes/**/*'
   s.swift_version = '5.0'
-  
-  # s.resource_bundles = {
-  #   'simplePod' => ['simplePod/Assets/*.png']
-  # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.preserve_paths = 'Classes/Sources/geos/**/*'
+  s.source_files = 'Classes/Sources/geos/{src,capi,public}/**/*'
+  s.public_header_files = 'Classes/Sources/geos/public/**/*'
+  s.user_target_xcconfig = {
+    'GCC_PREPROCESSOR_DEFINITIONS' => 'GEOS_USE_ONLY_R_API',
+    'CLANG_WARN_DOCUMENTATION_COMMENTS' => 'NO',
+  }
+  s.pod_target_xcconfig = {
+    'HEADER_SEARCH_PATHS' => '${PODS_TARGET_SRCROOT}/Classes/Sources/geos/include ${PODS_TARGET_SRCROOT}/Classes/Sources/geos/public ${PODS_TARGET_SRCROOT}/Classes/Sources/geos/src/deps',
+    'GCC_PREPROCESSOR_DEFINITIONS' => 'USE_UNSTABLE_GEOS_CPP_API NDEBUG',
+    'CLANG_WARN_DOCUMENTATION_COMMENTS' => 'NO',
+    'CLANG_WARN_UNREACHABLE_CODE' => 'NO',
+    'GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS' => 'NO',
+  }
 end
